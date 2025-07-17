@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title> </title>
+<style>
+  body {
+    margin: 0;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  button {
+    background-color: red;
+    border: none;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    outline: none;
+  }
+</style>
+</head>
+<body>
+  <button id="screamBtn"> </button>
+  <audio id="screamAudio" src="https://www.myinstants.com/media/sounds/scream.mp3" preload="auto"></audio>
+
+  <script>
+    const btn = document.getElementById('screamBtn');
+    const audio = document.getElementById('screamAudio');
+
+    btn.addEventListener('click', () => {
+      audio.volume = 1.0;
+      audio.currentTime = 0;
+      audio.play();
+    });
+  </script>
+</body>
+</html>
